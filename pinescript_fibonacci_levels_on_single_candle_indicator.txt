@@ -1,0 +1,301 @@
+//@version=5
+indicator("Fibonacci Levels on Single Candle", overlay=true,max_lines_count = 500)
+
+//first month
+high_price = request.security(syminfo.tickerid,"M",high[1]) 
+low_price = request.security(syminfo.tickerid,"M",low[1])
+price_range = high_price - low_price                                                                                                                                                                                                                                                                                                       
+fib1 = low_price + (price_range * 0.382)       
+fib2 = low_price + (price_range * 0.618)
+line1 = line.new(bar_index - 100, fib1, bar_index, fib1, color=color.green, width=2,extend = extend.both)                                                  
+line2 = line.new(bar_index - 100, fib2, bar_index, fib2, color=color.orange, width=2,extend = extend.both)
+line.delete(line1[1])
+line.delete(line2[1])
+x1 = label.new(bar_index+280,fib1,text = "1DN",color = color.yellow,size = size.small)
+label.delete(x1[1])
+x2 = label.new(bar_index+280,fib2,text = "1UP",color = color.yellow,size = size.small)
+label.delete(x2[1])                                          
+//second month
+high_price1 = request.security(syminfo.tickerid,"M",high[2]) 
+low_price1 = request.security(syminfo.tickerid,"M",low[2])
+price_range1 = high_price1 - low_price1                                                                                                                                                                                                                                                                                                     
+fib3 = low_price1 + (price_range1 * 0.382)       
+fib4 = low_price1 + (price_range1 * 0.618)
+line3 = line.new(bar_index - 100, fib3, bar_index, fib3, color=color.green, width=2,extend = extend.both)                                                  
+line4 = line.new(bar_index - 100, fib4, bar_index, fib4, color=color.orange, width=2,extend = extend.both)
+line.delete(line3[1])
+line.delete(line4[1])
+x3 = label.new(bar_index+280,fib3,text = "2DN",color = color.yellow,size = size.small)
+label.delete(x3[1])
+x4 = label.new(bar_index+280,fib4,text = "2UP",color = color.yellow,size = size.small)
+label.delete(x4[1])   
+
+//3rd month
+high_price2 = request.security(syminfo.tickerid,"M",high[3]) 
+low_price2 = request.security(syminfo.tickerid,"M",low[3])
+price_range2 = high_price2 - low_price2                                                                                                                                                                                                                                                                                                    
+fib5 = low_price2 + (price_range2 * 0.382)       
+fib6 = low_price2 + (price_range2 * 0.618)
+line5 = line.new(bar_index - 100, fib5, bar_index, fib5, color=color.green, width=2,extend = extend.both)                                                  
+line6 = line.new(bar_index - 100, fib6, bar_index, fib6, color=color.orange, width=2,extend = extend.both)
+line.delete(line5[1])
+line.delete(line6[1])
+x5 = label.new(bar_index+280,fib5,text = "3DN",color = color.yellow,size = size.small)
+label.delete(x3[1])
+x6 = label.new(bar_index+280,fib6,text = "3UP",color = color.yellow,size = size.small)
+label.delete(x4[1])   
+
+// 4th month
+high_price3 = request.security(syminfo.tickerid,"M",high[4]) 
+low_price3 = request.security(syminfo.tickerid,"M",low[4])
+price_range3 = high_price3 - low_price3                                                                                                                                                                                                                                                                                                    
+fib7 = low_price3 + (price_range3 * 0.382)       
+fib8 = low_price3 + (price_range3 * 0.618)
+line7 = line.new(bar_index - 100, fib7, bar_index, fib7, color=color.green, width=2,extend = extend.both)                                                  
+line8 = line.new(bar_index - 100, fib8, bar_index, fib8, color=color.orange, width=2,extend = extend.both)
+line.delete(line7[1])
+line.delete(line8[1])
+x7 = label.new(bar_index+380,fib7,text = "4DN",color = color.yellow,size = size.small)
+label.delete(x7[1])
+x8 = label.new(bar_index+380,fib8,text = "4UP",color = color.yellow,size = size.small)
+label.delete(x8[1])
+// 5th month
+high_price4 = request.security(syminfo.tickerid,"M",high[5]) 
+low_price4 = request.security(syminfo.tickerid,"M",low[5])
+price_range4 = high_price4 - low_price4                                                                                                                                                                                                                                                                                                    
+fib9 = low_price4 + (price_range4 * 0.382)       
+fib10 = low_price4 + (price_range4 * 0.618)
+line9 = line.new(bar_index - 100, fib9, bar_index, fib9, color=color.green, width=2, extend = extend.both)                                                  
+line10 = line.new(bar_index - 100, fib10, bar_index, fib10, color=color.orange, width=2, extend = extend.both)
+line.delete(line9[1])
+line.delete(line10[1])
+x9 = label.new(bar_index+380,fib9,text = "5DN",color = color.yellow,size = size.small)
+label.delete(x9[1])
+x10 = label.new(bar_index+380,fib10,text = "5UP",color = color.yellow,size = size.small)
+label.delete(x10[1])
+
+// 6th month
+high_price5 = request.security(syminfo.tickerid,"M",high[6]) 
+low_price5 = request.security(syminfo.tickerid,"M",low[6])
+price_range5 = high_price5 - low_price5                                                                                                                                                                                                                                                                                                    
+fib11 = low_price5 + (price_range5 * 0.382)       
+fib12 = low_price5 + (price_range5 * 0.618)
+line11 = line.new(bar_index - 100, fib11, bar_index, fib11, color=color.green, width=2, extend = extend.both)                                                  
+line12 = line.new(bar_index - 100, fib12, bar_index, fib12, color=color.orange, width=2, extend = extend.both)
+line.delete(line11[1])
+line.delete(line12[1])
+x11 = label.new(bar_index+380,fib11,text = "6DN",color = color.yellow,size = size.small)
+label.delete(x11[1])
+x12 = label.new(bar_index+380,fib12,text = "6UP",color = color.yellow,size = size.small)
+label.delete(x12[1])
+
+// 7th month
+high_price6 = request.security(syminfo.tickerid,"M",high[7]) 
+low_price6 = request.security(syminfo.tickerid,"M",low[7])
+price_range6 = high_price6 - low_price6                                                                                                                                                                                                                                                                                                    
+fib13 = low_price6 + (price_range6 * 0.382)       
+fib14 = low_price6 + (price_range6 * 0.618)
+line13 = line.new(bar_index - 100, fib13, bar_index, fib13, color=color.green, width=2, extend = extend.both)                                                  
+line14 = line.new(bar_index - 100, fib14, bar_index, fib14, color=color.orange, width=2, extend = extend.both)
+line.delete(line13[1])
+line.delete(line14[1])
+x13 = label.new(bar_index+380,fib13,text = "7DN",color = color.yellow,size = size.small)
+label.delete(x13[1])
+x14 = label.new(bar_index+480,fib14,text = "7UP",color = color.yellow,size = size.small)
+label.delete(x14[1])
+
+// 8th month
+high_price7 = request.security(syminfo.tickerid,"M",high[8]) 
+low_price7 = request.security(syminfo.tickerid,"M",low[8])
+price_range7 = high_price7 - low_price7                                                                                                                                                                                                                                                                                                    
+fib15 = low_price7 + (price_range7 * 0.382)       
+fib16 = low_price7 + (price_range7 * 0.618)
+line15 = line.new(bar_index - 100, fib15, bar_index, fib15, color=color.green, width=2, extend = extend.both)                                                  
+line16 = line.new(bar_index - 100, fib16, bar_index, fib16, color=color.orange, width=2, extend = extend.both)
+line.delete(line15[1])
+line.delete(line16[1])
+x15 = label.new(bar_index+480,fib15,text = "8DN",color = color.yellow,size = size.small)
+label.delete(x15[1])
+x16 = label.new(bar_index+480,fib16,text = "8UP",color = color.yellow,size = size.small)
+label.delete(x16[1])
+
+// 9th month
+high_price8 = request.security(syminfo.tickerid,"M",high[9]) 
+low_price8 = request.security(syminfo.tickerid,"M",low[9])
+price_range8 = high_price8 - low_price8                                                                                                                                                                                                                                                                                                    
+fib17 = low_price8 + (price_range8 * 0.382)       
+fib18 = low_price8 + (price_range8 * 0.618)
+line17 = line.new(bar_index - 100, fib17, bar_index, fib17, color=color.green, width=2, extend = extend.both)                                                  
+line18 = line.new(bar_index - 100, fib18, bar_index, fib18, color=color.orange, width=2, extend = extend.both)
+line.delete(line17[1])
+line.delete(line18[1])
+x17 = label.new(bar_index+480,fib17,text = "9DN",color = color.yellow,size = size.small)
+label.delete(x17[1])
+x18 = label.new(bar_index+480,fib18,text = "9UP",color = color.yellow,size = size.small)
+label.delete(x18[1])
+
+// 10th month
+high_price9 = request.security(syminfo.tickerid,"M",high[10]) 
+low_price9 = request.security(syminfo.tickerid,"M",low[10])
+price_range9 = high_price9 - low_price9                                                                                                                                                                                                                                                                                                    
+fib19 = low_price9 + (price_range9 * 0.382)       
+fib20 = low_price9 + (price_range9 * 0.618)
+line19 = line.new(bar_index - 100, fib19, bar_index, fib19, color=color.green, width=2, extend = extend.both)                                                  
+line20 = line.new(bar_index - 100, fib20, bar_index, fib20, color=color.orange, width=2, extend = extend.both)
+line.delete(line19[1])
+line.delete(line20[1])
+x19 = label.new(bar_index+400,fib19,text = "10DN",color = color.yellow,size = size.small)
+label.delete(x19[1])
+x20 = label.new(bar_index+400,fib20,text = "10UP",color = color.yellow,size = size.small)
+label.delete(x20[1])
+
+// 11th month
+high_price10 = request.security(syminfo.tickerid,"M",high[11]) 
+low_price10 = request.security(syminfo.tickerid,"M",low[11])
+price_range10 = high_price10 - low_price10                                                                                                                                                                                                                                                                                                    
+fib21 = low_price10 + (price_range10 * 0.382)       
+fib22 = low_price10 + (price_range10 * 0.618)
+line21 = line.new(bar_index - 100, fib21, bar_index, fib21, color=color.green, width=2, extend = extend.both)                                                  
+line22 = line.new(bar_index - 100, fib22, bar_index, fib22, color=color.orange, width=2, extend = extend.both)
+line.delete(line21[1])
+line.delete(line22[1])
+x21 = label.new(bar_index+400,fib21,text = "11DN",color = color.yellow,size = size.small)
+label.delete(x21[1])
+x22 = label.new(bar_index+400,fib22,text = "11UP",color = color.yellow,size = size.small)
+label.delete(x22[1])
+
+// 12th month
+high_price11 = request.security(syminfo.tickerid,"M",high[12]) 
+low_price11 = request.security(syminfo.tickerid,"M",low[12])
+price_range11 = high_price11 - low_price11                                                                                                                                                                                                                                                                                                    
+fib23 = low_price11 + (price_range11 * 0.382)       
+fib24 = low_price11 + (price_range11 * 0.618)
+line23 = line.new(bar_index - 100, fib23, bar_index, fib23, color=color.green, width=2, extend = extend.both)                                                  
+line24 = line.new(bar_index - 100, fib24, bar_index, fib24, color=color.orange, width=2, extend = extend.both)
+line.delete(line23[1])
+line.delete(line24[1])
+x23 = label.new(bar_index+400,fib23,text = "12DN",color = color.yellow,size = size.small)
+label.delete(x23[1])
+x24 = label.new(bar_index+280,fib24,text = "12UP",color = color.yellow,size = size.small)
+label.delete(x24[1])
+
+// 13th month
+high_price12 = request.security(syminfo.tickerid,"M",high[13]) 
+low_price12 = request.security(syminfo.tickerid,"M",low[13])
+price_range12 = high_price12 - low_price12                                                                                                                                                                                                                                                                                                    
+fib25 = low_price12 + (price_range12 * 0.382)       
+fib26 = low_price12 + (price_range12 * 0.618)
+line25 = line.new(bar_index - 100, fib25, bar_index, fib25, color=color.green, width=2, extend = extend.both)                                                  
+line26 = line.new(bar_index - 100, fib26, bar_index, fib26, color=color.orange, width=2, extend = extend.both)
+line.delete(line25[1])
+line.delete(line26[1])
+x25 = label.new(bar_index+280,fib25,text = "13DN",color = color.yellow,size = size.small)
+label.delete(x25[1])
+x26 = label.new(bar_index+280,fib26,text = "13UP",color = color.yellow,size = size.small)
+label.delete(x26[1])
+
+// 14th month
+high_price13 = request.security(syminfo.tickerid,"M",high[14]) 
+low_price13 = request.security(syminfo.tickerid,"M",low[14])
+price_range13 = high_price13 - low_price13                                                                                                                                                                                                                                                                                                    
+fib27 = low_price13 + (price_range13 * 0.382)       
+fib28 = low_price13 + (price_range13 * 0.618)
+line27 = line.new(bar_index - 100, fib27, bar_index, fib27, color=color.green, width=2, extend = extend.both)                                                  
+line28 = line.new(bar_index - 100, fib28, bar_index, fib28, color=color.orange, width=2, extend = extend.both)
+line.delete(line27[1])
+line.delete(line28[1])
+x27 = label.new(bar_index+280,fib27,text = "14DN",color = color.yellow,size = size.small)
+label.delete(x27[1])
+x28 = label.new(bar_index+280,fib28,text = "14UP",color = color.yellow,size = size.small)
+label.delete(x28[1])
+
+// 15th month
+high_price14 = request.security(syminfo.tickerid,"M",high[15]) 
+low_price14 = request.security(syminfo.tickerid,"M",low[15])
+price_range14 = high_price14 - low_price14                                                                                                                                                                                                                                                                                                    
+fib29 = low_price14 + (price_range14 * 0.382)       
+fib30 = low_price14 + (price_range14 * 0.618)
+line29 = line.new(bar_index - 100, fib29, bar_index, fib29, color=color.green, width=2, extend = extend.both)                                                  
+line30 = line.new(bar_index - 100, fib30, bar_index, fib30, color=color.orange, width=2, extend = extend.both)
+line.delete(line29[1])
+line.delete(line30[1])
+x29 = label.new(bar_index+280,fib29,text = "15DN",color = color.yellow,size = size.small)
+label.delete(x29[1])
+x30 = label.new(bar_index+280,fib30,text = "15UP",color = color.yellow,size = size.small)
+label.delete(x30[1])
+
+// 16th month
+high_price15 = request.security(syminfo.tickerid,"M",high[16]) 
+low_price15 = request.security(syminfo.tickerid,"M",low[16])
+price_range15 = high_price15 - low_price15                                                                                                                                                                                                                                                                                                    
+fib31 = low_price15 + (price_range15 * 0.382)       
+fib32 = low_price15 + (price_range15 * 0.618)
+line31 = line.new(bar_index - 100, fib31, bar_index, fib31, color=color.green, width=2, extend = extend.both)                                                  
+line32 = line.new(bar_index - 100, fib32, bar_index, fib32, color=color.orange, width=2, extend = extend.both)
+line.delete(line31[1])
+line.delete(line32[1])
+x31 = label.new(bar_index+280,fib31,text = "16DN",color = color.yellow,size = size.small)
+label.delete(x31[1])
+x32 = label.new(bar_index+280,fib32,text = "16UP",color = color.yellow,size = size.small)
+label.delete(x32[1])
+
+// 17th month
+high_price16 = request.security(syminfo.tickerid,"M",high[17]) 
+low_price16 = request.security(syminfo.tickerid,"M",low[17])
+price_range16 = high_price16 - low_price16                                                                                                                                                                                                                                                                                                    
+fib33 = low_price16 + (price_range16 * 0.382)       
+fib34 = low_price16 + (price_range16 * 0.618)
+line33 = line.new(bar_index - 100, fib33, bar_index, fib33, color=color.green, width=2, extend = extend.both)                                                  
+line34 = line.new(bar_index - 100, fib34, bar_index, fib34, color=color.orange, width=2, extend = extend.both)
+line.delete(line33[1])
+line.delete(line34[1])
+x33 = label.new(bar_index+280,fib33,text = "17DN",color = color.yellow,size = size.small)
+label.delete(x33[1])
+x34 = label.new(bar_index+280,fib34,text = "17UP",color = color.yellow,size = size.small)
+label.delete(x34[1])
+
+// 18th month
+high_price17 = request.security(syminfo.tickerid,"M",high[18]) 
+low_price17 = request.security(syminfo.tickerid,"M",low[18])
+price_range17 = high_price17 - low_price17                                                                                                                                                                                                                                                                                                    
+fib35 = low_price17 + (price_range17 * 0.382)       
+fib36 = low_price17 + (price_range17 * 0.618)
+line35 = line.new(bar_index - 100, fib35, bar_index, fib35, color=color.green, width=2, extend = extend.both)                                                  
+line36 = line.new(bar_index - 100, fib36, bar_index, fib36, color=color.orange, width=2, extend = extend.both)
+line.delete(line35[1])
+line.delete(line36[1])
+x35 = label.new(bar_index+280,fib35,text = "18DN",color = color.yellow,size = size.small)
+label.delete(x35[1])
+x36 = label.new(bar_index+280,fib36,text = "18UP",color = color.yellow,size = size.small)
+label.delete(x36[1])
+
+// 19th month
+high_price18 = request.security(syminfo.tickerid,"M",high[19]) 
+low_price18 = request.security(syminfo.tickerid,"M",low[19])
+price_range18 = high_price18 - low_price18                                                                                                                                                                                                                                                                                                    
+fib37 = low_price18 + (price_range18 * 0.382)       
+fib38 = low_price18 + (price_range18 * 0.618)
+line37 = line.new(bar_index - 100, fib37, bar_index, fib37, color=color.green, width=2, extend = extend.both)                                                  
+line38 = line.new(bar_index - 100, fib38, bar_index, fib38, color=color.orange, width=2, extend = extend.both)
+line.delete(line37[1])
+line.delete(line38[1])
+x37 = label.new(bar_index+280,fib37,text = "19DN",color = color.yellow,size = size.small)
+label.delete(x37[1])
+x38 = label.new(bar_index+280,fib38,text = "19UP",color = color.yellow,size = size.small)
+label.delete(x38[1])
+
+// 20th month
+high_price19 = request.security(syminfo.tickerid,"M",high[20]) 
+low_price19 = request.security(syminfo.tickerid,"M",low[20])
+price_range19 = high_price19 - low_price19                                                                                                                                                                                                                                                                                                    
+fib39 = low_price19 + (price_range19 * 0.382)       
+fib40 = low_price19 + (price_range19 * 0.618)
+line39 = line.new(bar_index - 100, fib39, bar_index, fib39, color=color.green, width=2, extend = extend.both)                                                  
+line40 = line.new(bar_index - 100, fib40, bar_index, fib40, color=color.orange, width=2, extend = extend.both)
+line.delete(line39[1])
+line.delete(line40[1])
+x39 = label.new(bar_index+280,fib39,text = "20DN",color = color.yellow,size = size.small)
+label.delete(x39[1])
+x40 = label.new(bar_index+280,fib40,text = "20UP",color = color.yellow,size = size.small)
+label.delete(x40[1])
+
